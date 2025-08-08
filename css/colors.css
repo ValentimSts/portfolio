@@ -5,6 +5,9 @@
     --color-primary: #0077ff;
     --color-secondary: #f39c12;
     --color-accent: #f39c12;
+    
+    --color-link: #0077ff;
+    --color-link-hover: #0055cc;
 }
 
 .dark {
@@ -14,4 +17,7 @@
     --color-primary: #3399ff;
     --color-secondary: #e67e22;
     --color-accent: #e67e22;
+    
+    --color-link: #3399ff;
+    --color-link-hover: #66b3ff;
 }

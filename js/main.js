@@ -1,6 +1,9 @@
-import { createGreeting } from './components/greeting.js';
+import { IDS } from './constants/ids.js';
+import { createNavbar } from './components/navbar/navbar.js';
 
-const app = document.getElementById('app');
-if (app) {
-  app.appendChild(createGreeting('Hello'));
+const navbar = document.getElementById(IDS.NAVBAR);
+if (navbar) {
+  navbar.appendChild(createNavbar());
 }
+
+

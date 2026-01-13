@@ -1,0 +1,38 @@
+/**
+ * Home page specific styles
+ */
+
+/* Home page styles */
+.home-page .hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.home-page .hero h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.home-page .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-primary);
+  opacity: 0.9;
+}

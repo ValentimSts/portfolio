@@ -1,0 +1,39 @@
+/**
+ * About page specific styles
+ */
+
+/* About page styles */
+.about-page {
+  max-width: 800px;
+}
+
+.about-content {
+  margin-top: 2rem;
+}
+
+.about-page .skills {
+  margin-top: 2rem;
+}
+
+.about-page .skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-page .skills li {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles for about page */
+@media (max-width: 768px) {
+  .about-page .skills ul {
+    justify-content: center;
+  }
+}

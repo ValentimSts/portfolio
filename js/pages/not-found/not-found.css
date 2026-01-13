@@ -1,0 +1,117 @@
+/**
+ * Not Found (404) page specific styles
+ */
+
+/* Not Found page layout */
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  text-align: center;
+}
+
+.not-found-container {
+  max-width: 500px;
+  padding: 2rem;
+}
+
+/* Error code styling */
+.error-code {
+  font-size: 8rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Error title */
+.error-title {
+  font-size: var(--font-size-h2);
+  color: var(--color-text);
+  margin: 1rem 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Error description */
+.error-description {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Action buttons container */
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Error buttons */
+.error-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.error-button.primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.error-button.primary:hover {
+  background-color: var(--color-primary);
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.error-button.secondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+}
+
+.error-button.secondary:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* Responsive design for not-found page */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 6rem;
+  }
+  
+  .not-found-container {
+    padding: 1rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-button {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .error-title {
+    font-size: var(--font-size-h3);
+  }
+}

@@ -25,3 +25,9 @@
 #navbar a:hover {
   color: var(--color-primary);
 }
+
+/* Active navigation state */
+#navbar a.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}

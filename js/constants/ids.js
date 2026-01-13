@@ -6,18 +6,19 @@
 
 /**
  * DOM element ID constants
- * @namespace IDS
+ * @namespace IDs
  * @description Centralized collection of DOM element IDs to avoid magic strings
  * and ensure consistency across the application
  * @readonly
  * @example
  * // Usage in component
- * import { IDS } from './constants/ids.js';
- * const navbar = document.getElementById(IDS.NAVBAR);
+ * import { IDs } from './constants/ids.js';
+ * const navbar = document.getElementById(IDs.NAVBAR);
  */
-export const IDS = {
-  /** @type {string} Header navigation container element ID */
-  NAVBAR: 'navbar',
+export const IDs = {
   /** @type {string} Main application content container element ID */
   MAIN: 'app',
+  
+  /** @type {string} Header navigation container element ID */
+  NAVBAR: 'navbar',
 };

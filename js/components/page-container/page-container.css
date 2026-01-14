@@ -1,0 +1,15 @@
+.page-container {
+  padding: var(--container-padding);
+  margin: var(--container-padding);
+  border: 1px solid var(--color-blueprint);
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--container-padding) * 2);
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure page content fills the container */
+.page-container > .page {
+  height: 100%;
+}

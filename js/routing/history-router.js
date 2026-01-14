@@ -79,6 +79,9 @@ export class HistoryRouter extends BaseRouter {
     }
     
     this.render();
+    
+    // Dispatch custom event for background updates
+    window.dispatchEvent(new CustomEvent('pagechange', { detail: { path } }));
   }
 
   /**

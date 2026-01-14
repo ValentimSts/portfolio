@@ -1,23 +1,21 @@
+:root {
+  --container-padding: 20px;
+}
+
 body {
-  background-color: var(--color-bg);
+  background-color: transparent;
   color: var(--color-text);
   margin: 0;
-  padding-top: 80px;
   min-height: 100vh;
 }
 
 header {
   padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
 }
 
 /* Router Switcher Button */
 .router-switcher {
-  position: fixed;
+  position: fixed;  
   top: 20px;
   right: 20px;
   z-index: 1001;

@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid var(--color-text);
   background-color: var(--color-bg);
 }
 
@@ -30,4 +29,23 @@
 #navbar a.active {
   color: var(--color-primary);
   font-weight: var(--font-weight-bold);
+}
+
+/* Circle indicator styles */
+.navbar-circle-indicator {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-circle-indicator circle {
+  transition: stroke 0.3s ease;
+}
+
+/* Ensure links are above the circle */
+#navbar ul {
+  position: relative;
+  z-index: 1;
 }

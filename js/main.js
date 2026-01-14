@@ -6,6 +6,7 @@
  */
 
 import { createNavbar } from './components/navbar/navbar.js';
+import { initPageBackground, updatePageBackground } from './components/page-background/page-background.js';
 import { historyRouter, HISTORY_NAVIGATION_ROUTES, HISTORY_ROUTES } from './routing/history-router.js';
 import { IDs } from './constants/ids.js';
 
@@ -44,6 +45,9 @@ function initApp() {
   
   // Initialize the router
   historyRouter.init();
+
+  // Initialize page background with navigation routes
+  initPageBackground(HISTORY_NAVIGATION_ROUTES);
 
   // Create and append navbar
   const navbarContainer = document.getElementById(IDs.NAVBAR);

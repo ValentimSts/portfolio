@@ -3,18 +3,33 @@
  */
 
 /* Projects page styles */
+.projects-page {
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .projects-page {
+  border-color: transparent;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .projects-grid {
+  border-color: transparent;
 }
 
 .project-card {
   border: 1px solid var(--color-text);
   border-radius: 8px;
   padding: 1.5rem;
-  background-color: var(--color-bg);
+  background-color: transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

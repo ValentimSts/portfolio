@@ -1,15 +1,26 @@
 #navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--color-bg);
+  background-color: transparent;
+
+  z-index: 1000;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden #navbar {
+  border-color: transparent;
 }
 
 #navbar ul {
   list-style: none;
   display: flex;
-  gap: 10rem;
+  gap: 18rem;
   margin: 0;
   padding: 0;
 }
@@ -22,12 +33,12 @@
 }
 
 #navbar a:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* Active navigation state */
 #navbar a.active {
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--font-weight-bold);
 }
 

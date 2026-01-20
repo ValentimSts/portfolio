@@ -1,10 +1,25 @@
 /**
- * Art page specific styles
+ * Misc page specific styles
  */
 
-/* Art page styles */
+/* Misc page styles */
+.misc-page {
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .misc-page {
+  border-color: transparent;
+}
+
 .art-gallery {
   margin-top: 2rem;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .art-gallery {
+  border-color: transparent;
 }
 
 .art-placeholder {

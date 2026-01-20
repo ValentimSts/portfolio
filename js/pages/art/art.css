@@ -3,8 +3,23 @@
  */
 
 /* Art page styles */
+.art-page {
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .art-page {
+  border-color: transparent;
+}
+
 .art-gallery {
   margin-top: 2rem;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .art-gallery {
+  border-color: transparent;
 }
 
 .art-placeholder {

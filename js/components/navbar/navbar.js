@@ -40,7 +40,7 @@ function createCircleIndicator() {
   circle.setAttribute('cy', size / 2);
   circle.setAttribute('r', radius);
   circle.setAttribute('fill', 'none');
-  circle.setAttribute('stroke', 'var(--color-accent)');
+  circle.setAttribute('stroke', 'var(--color-bg)');
   circle.setAttribute('stroke-width', thickness);
   
   svg.appendChild(circle);

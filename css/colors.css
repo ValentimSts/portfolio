@@ -1,14 +1,16 @@
 :root {
-    --color-bg: #ffffff;
-    --color-text: #222222;
-
-    --color-primary: #0077ff;
-    --color-secondary: #f39c12;
-    --color-accent: #f39c12;
-    --color-blueprint: #1e90ff;
+    --color-bg: #EE8012;
+    --color-primary: #E4E6DD;
+    --color-primary-dark: #CCCCCC;
+    --color-secondary: #666666;
     
-    --color-link: #0077ff;
-    --color-link-hover: #0055cc;
+    --color-accent: #000003;
+    --color-blueprint: #00AAFF;
+
+    --color-text: #222222;
+    
+    --color-link: #00AAFF;
+    --color-link-hover: #66b3ff;
 }
 
 .dark {

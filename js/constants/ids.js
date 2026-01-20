@@ -21,4 +21,13 @@ export const IDs = {
   
   /** @type {string} Header navigation container element ID */
   NAVBAR: 'navbar',
+
+  /** @type {string} Settings button element ID */
+  SETTINGS_BUTTON: 'settings-button',
+
+  /** @type {string} Settings menu panel element ID */
+  SETTINGS_MENU: 'settings-menu',
+
+  /** @type {string} Settings overlay element ID */
+  SETTINGS_OVERLAY: 'settings-overlay',
 };

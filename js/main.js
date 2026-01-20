@@ -7,6 +7,7 @@
 
 import { createNavbar } from './components/navbar/navbar.js';
 import { initPageBackground, updatePageBackground } from './components/page-background/page-background.js';
+import { initSettingsMenu } from './components/settings-menu/settings-menu.js';
 import { historyRouter, HISTORY_NAVIGATION_ROUTES, HISTORY_ROUTES } from './routing/history-router.js';
 import { IDs } from './constants/ids.js';
 
@@ -54,6 +55,9 @@ function initApp() {
   if (navbarContainer) {
     const navbar = createNavbar(HISTORY_NAVIGATION_ROUTES);
     navbarContainer.appendChild(navbar);
+
+    // Initialize settings menu with the navbar container
+    initSettingsMenu(navbarContainer);
   }
 }
 

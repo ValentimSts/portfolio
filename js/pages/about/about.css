@@ -5,10 +5,22 @@
 /* About page styles */
 .about-page {
   max-width: 800px;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .about-page {
+  border-color: transparent;
 }
 
 .about-content {
   margin-top: 2rem;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .about-content {
+  border-color: transparent;
 }
 
 .about-page .skills {

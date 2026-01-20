@@ -1,12 +1,17 @@
 .page-container {
   padding: var(--container-padding);
-  margin: var(--container-padding);
+  margin: var(--container-margin);
   border: 1px solid var(--color-blueprint);
   box-sizing: border-box;
   min-height: calc(100vh - var(--container-padding) * 2);
   background-color: transparent;
   position: relative;
   z-index: 1;
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .page-container {
+  border-color: transparent;
 }
 
 /* Ensure page content fills the container */

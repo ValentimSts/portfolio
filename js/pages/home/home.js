@@ -4,7 +4,7 @@
  * @since 0.0.0
  */
 
-import { HISTORY_ROUTES } from '../../routing/history-router.js';
+import { getStrings } from '../../locales/index.js';
 
 /**
  * Creates the home page component
@@ -15,27 +15,23 @@ import { HISTORY_ROUTES } from '../../routing/history-router.js';
  * document.getElementById('app').appendChild(homePage);
  */
 export function createHomePage() {
+  const strings = getStrings();
   const page = document.createElement('div');
   page.className = 'page home-page';
   
   const hero = document.createElement('section');
   hero.className = 'hero';
   
-  const title = document.createElement('h1');
-  title.textContent = 'Welcome to My Portfolio';
+  const welcomeText = document.createElement('p');
+  welcomeText.className = 'welcome-text';
+  welcomeText.textContent = strings.home.welcomeText;
   
-  const subtitle = document.createElement('p');
-  subtitle.textContent = 'I\'m a passionate developer creating amazing digital experiences.';
+  const name = document.createElement('h1');
+  name.className = 'name';
+  name.textContent = strings.home.name;
   
-  const cta = document.createElement('a');
-  // Use HISTORY_ROUTES configuration for clean URLs
-  cta.href = HISTORY_ROUTES.PROJECTS.href;
-  cta.textContent = 'View My Work';
-  cta.className = 'cta-button';
-  
-  hero.appendChild(title);
-  hero.appendChild(subtitle);
-  hero.appendChild(cta);
+  hero.appendChild(welcomeText);
+  hero.appendChild(name);
   page.appendChild(hero);
   
   return page;

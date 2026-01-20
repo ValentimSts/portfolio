@@ -9,11 +9,23 @@
   justify-content: center;
   min-height: calc(100vh - 160px);
   text-align: center;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .not-found-page {
+  border-color: transparent;
 }
 
 .not-found-container {
   max-width: 500px;
   padding: 2rem;
+  border: 1px solid var(--color-blueprint);
+}
+
+/* Hide blueprint border when debug mode is disabled */
+.blueprint-hidden .not-found-container {
+  border-color: transparent;
 }
 
 /* Error code styling */

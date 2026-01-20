@@ -1,5 +1,6 @@
 :root {
-  --container-padding: 20px;
+  --container-padding: 10px;
+  --container-margin: 20px;
 }
 
 body {
@@ -11,63 +12,6 @@ body {
 
 header {
   padding: 0;
-}
-
-/* Router Switcher Button */
-.router-switcher {
-  position: fixed;  
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-}
-
-.router-toggle-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-family: var(--font-family-base);
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.router-toggle-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  opacity: 0.9;
-}
-
-.router-toggle-btn:active {
-  transform: translateY(0);
-}
-
-.router-icon {
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.router-type {
-  font-weight: var(--font-weight-semibold);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .router-switcher {
-    top: 10px;
-    right: 10px;
-  }
-  
-  .router-toggle-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
 }
 
 main {

@@ -1,0 +1,149 @@
+/* Settings Menu Overlay (for blur effect) */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+}
+
+.settings-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Settings Menu Panel */
+.settings-menu {
+  --settings-menu-width: 25%;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--settings-menu-width);
+  min-width: 280px;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-left: 1px solid var(--color-blueprint);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-menu--open {
+  transform: translateX(0);
+}
+
+/* Settings Menu Header */
+.settings-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-blueprint);
+}
+
+.settings-menu__title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Close Button */
+.settings-menu__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.settings-menu__close:hover {
+  opacity: 0.7;
+}
+
+.settings-menu__close:focus {
+  outline: none;
+}
+
+.settings-menu__close-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.settings-menu__close-icon::before,
+.settings-menu__close-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.settings-menu__close-icon::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.settings-menu__close-icon::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.settings-menu__close:hover .settings-menu__close-icon::before,
+.settings-menu__close:hover .settings-menu__close-icon::after {
+  background-color: var(--color-accent);
+}
+
+/* Settings Menu Content */
+.settings-menu__content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Settings Item */
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-item__label {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .settings-menu {
+    --settings-menu-width: 80%;
+    min-width: unset;
+    max-width: unset;
+  }
+}

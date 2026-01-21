@@ -328,18 +328,18 @@ export function initSettingsMenu(navbarElement) {
     // Initialize blueprint state from localStorage
     initBlueprintState();
 
-    const navbarItemList = navbarElement.querySelector(HTML_ELEMENTS.UNORDERED_LIST);
-    if (navbarItemList) {
+    // const navbarItemList = navbarElement.querySelector(HTML_ELEMENTS.UNORDERED_LIST);
+    if (navbarElement) {
       // Add the settings button as the last item in the navbar list
-        const listItem = document.createElement(HTML_ELEMENTS.LIST_ITEM);
+        const buttonSection = document.createElement(HTML_ELEMENTS.SECTION);
         const button = createHamburgerButton({
           id: IDs.SETTINGS_BUTTON,
           onClick: toggleSettingsMenu,
           ariaLabel: 'Open settings menu'
         });
         settingsMenuState.buttonElement = button;
-        listItem.appendChild(button);
-        navbarItemList.appendChild(listItem);
+        buttonSection.appendChild(button);
+        navbarElement.appendChild(buttonSection);
     }
 
   // Create overlay and menu, add to body

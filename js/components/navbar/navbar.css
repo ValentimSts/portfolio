@@ -1,12 +1,10 @@
 #navbar {
-  position: fixed;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
   background-color: transparent;
+  gap: 4rem;
 
   z-index: 1000;
   border: 1px solid var(--color-blueprint);
@@ -23,6 +21,11 @@
   gap: 18rem;
   margin: 0;
   padding: 0;
+  border: 1px solid var(--color-blueprint);
+}
+
+.blueprint-hidden #navbar ul {
+  border-color: transparent;
 }
 
 #navbar a {

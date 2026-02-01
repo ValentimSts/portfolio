@@ -12,11 +12,11 @@
  * @readonly
  */
 export const CLASSES = {
-  // Hamburger Button
-  /** @type {string} Hamburger button class */
-  HAMBURGER_BUTTON: 'hamburger-button',
-  /** @type {string} Hamburger button icon class */
-  HAMBURGER_BUTTON_ICON: 'hamburger-button__icon',
+  // Settings Button
+  /** @type {string} Settings button class */
+  SETTINGS_BUTTON: 'settings-button',
+  /** @type {string} Settings button icon class */
+  SETTINGS_BUTTON_ICON: 'settings-button__icon',
 
   // Settings Overlay
   /** @type {string} Settings overlay class */

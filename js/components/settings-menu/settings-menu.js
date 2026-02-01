@@ -8,7 +8,7 @@ import { HTML_ELEMENTS } from '../../constants/elements.js';
 import { CLASSES } from '../../constants/classes.js';
 import { IDs } from '../../constants/ids.js';
 import { createToggleSwitch } from '../toggle-switch/toggle-switch.js';
-import { createHamburgerButton, setHamburgerExpanded } from '../hamburger-button/hamburger-button.js';
+import { createSettingsButton, setSettingsButtonExpanded } from '../settings-button/settings-button.js';
 
 /**
  * Configuration for the settings menu
@@ -213,7 +213,7 @@ export function openSettingsMenu() {
     settingsMenuState.overlayElement.classList.add(CLASSES.SETTINGS_OVERLAY_VISIBLE);
   }
 
-  setHamburgerExpanded(settingsMenuState.buttonElement, true);
+  setSettingsButtonExpanded(settingsMenuState.buttonElement, true);
 
   // Prevent body scroll when menu is open
   // Add padding to compensate for scrollbar width to prevent content shift
@@ -222,11 +222,13 @@ export function openSettingsMenu() {
   document.body.style.overflow = 'hidden';
 
   // Also compensate fixed elements (navbar)
+  /*
   const navbar = document.getElementById(IDs.NAVBAR);
   if (navbar) {
     navbar.style.paddingRight = `calc(2rem + ${scrollbarWidth}px)`;
   }
-
+  */
+ 
   // Add escape key listener
   document.addEventListener('keydown', handleEscapeKey);
 }
@@ -248,7 +250,7 @@ export function closeSettingsMenu() {
     settingsMenuState.overlayElement.classList.remove(CLASSES.SETTINGS_OVERLAY_VISIBLE);
   }
 
-  setHamburgerExpanded(settingsMenuState.buttonElement, false);
+  setSettingsButtonExpanded(settingsMenuState.buttonElement, false);
 
   // Restore body scroll and remove padding compensation
   document.body.style.paddingRight = '';
@@ -332,7 +334,7 @@ export function initSettingsMenu(navbarElement) {
     if (navbarElement) {
       // Add the settings button as the last item in the navbar list
         const buttonSection = document.createElement(HTML_ELEMENTS.SECTION);
-        const button = createHamburgerButton({
+        const button = createSettingsButton({
           id: IDs.SETTINGS_BUTTON,
           onClick: toggleSettingsMenu,
           ariaLabel: 'Open settings menu'
@@ -342,7 +344,6 @@ export function initSettingsMenu(navbarElement) {
         navbarElement.appendChild(buttonSection);
     }
 
-  // Create overlay and menu, add to body
   const overlay = createOverlay();
   const menu = createSettingsMenuPanel();
   

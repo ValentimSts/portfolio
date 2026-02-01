@@ -41,16 +41,13 @@ function configureRoutes(router) {
  * @description Sets up the router, configures routes, and creates the navbar
  */
 function initApp() {
-  // Configure routes on the router
   configureRoutes(historyRouter);
   
-  // Initialize the router
   historyRouter.init();
 
   // Initialize page background with navigation routes
   initPageBackground(HISTORY_NAVIGATION_ROUTES);
 
-  // Create and append navbar
   const navbarContainer = document.getElementById(IDs.NAVBAR);
   if (navbarContainer) {
     const navbar = createNavbar(HISTORY_NAVIGATION_ROUTES);

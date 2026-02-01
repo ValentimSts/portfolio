@@ -1,5 +1,5 @@
 /**
- * @fileoverview Hamburger button component for the portfolio website
+ * @fileoverview Settings button component for the portfolio website
  * @author ValentimSts
  * @since 0.0.0
  */
@@ -7,29 +7,29 @@
 import { CLASSES } from '../../constants/classes.js';
 
 /**
- * Creates a hamburger button element using the settings icon SVG
- * @function createHamburgerButton
- * @param {Object} options - Configuration options for the hamburger button
+ * Creates a settings button element using the settings icon SVG
+ * @function createSettingsButton
+ * @param {Object} options - Configuration options for the settings button
  * @param {string} [options.id] - The unique ID for the button
  * @param {Function} [options.onClick] - Callback function when button is clicked
  * @param {string} [options.ariaLabel='Open menu'] - Accessible label for the button
  * @param {string} [options.className] - Additional CSS class(es) to add
- * @returns {HTMLButtonElement} The hamburger button element
+ * @returns {HTMLButtonElement} The settings button element
  * @example
- * const menuButton = createHamburgerButton({
+ * const menuButton = createSettingsButton({
  *   id: 'menu-toggle',
  *   onClick: () => toggleMenu(),
  *   ariaLabel: 'Toggle navigation menu'
  * });
  */
-export function createHamburgerButton({ 
+export function createSettingsButton({ 
   id, 
   onClick, 
   ariaLabel = 'Open menu', 
   className
 } = {}) {
   const button = document.createElement('button');
-  button.className = CLASSES.HAMBURGER_BUTTON;
+  button.className = CLASSES.SETTINGS_BUTTON;
   
   if (className) {
     button.classList.add(...className.split(' '));
@@ -46,7 +46,7 @@ export function createHamburgerButton({
   const icon = document.createElement('img');
   icon.src = 'assets/icons/Arturo-Wibawa-Akar-Settings-horizontal.svg';
   icon.alt = '';
-  icon.className = CLASSES.HAMBURGER_BUTTON_ICON;
+  icon.className = CLASSES.SETTINGS_BUTTON_ICON;
   icon.setAttribute('aria-hidden', 'true');
   button.appendChild(icon);
 
@@ -58,23 +58,23 @@ export function createHamburgerButton({
 }
 
 /**
- * Sets the aria-expanded attribute on a hamburger button
- * @function setHamburgerExpanded
- * @param {HTMLButtonElement} button - The hamburger button element
+ * Sets the aria-expanded attribute on a settings button
+ * @function setSettingsButtonExpanded
+ * @param {HTMLButtonElement} button - The settings button element
  * @param {boolean} expanded - Whether the button controls an expanded element
  */
-export function setHamburgerExpanded(button, expanded) {
+export function setSettingsButtonExpanded(button, expanded) {
   if (button) {
     button.setAttribute('aria-expanded', String(expanded));
   }
 }
 
 /**
- * Gets the expanded state of a hamburger button
- * @function isHamburgerExpanded
- * @param {HTMLButtonElement} button - The hamburger button element
+ * Gets the expanded state of a settings button
+ * @function isSettingsButtonExpanded
+ * @param {HTMLButtonElement} button - The settings button element
  * @returns {boolean} Whether the button is expanded
  */
-export function isHamburgerExpanded(button) {
+export function isSettingsButtonExpanded(button) {
   return button?.getAttribute('aria-expanded') === 'true';
 }

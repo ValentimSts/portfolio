@@ -8,6 +8,7 @@ import { ROUTER_TYPE } from '../../routing/index.js';
 import { HTML_ELEMENTS } from '../../constants/elements.js';
 import { HASH_NAVIGATION_ROUTES } from '../../routing/hash-router.js';
 import { HISTORY_NAVIGATION_ROUTES } from '../../routing/history-router.js';
+import { CLASSES } from '../../constants/classes.js';
 
 /**
  * Configuration for the navbar circle indicator
@@ -156,6 +157,7 @@ function setupCircleIndicator(navBar, links) {
  */
 export function createNavbar(navigationRoutes) {
   const navBar = document.createElement(HTML_ELEMENTS.NAVIGATION);
+
   const list = document.createElement(HTML_ELEMENTS.UNORDERED_LIST);
 
   navigationRoutes.forEach(route => {
@@ -167,7 +169,18 @@ export function createNavbar(navigationRoutes) {
     list.appendChild(item);
   });
 
+  // Section used for the links - left side of the navbar.
+  // const listSection = document.createElement(HTML_ELEMENTS.SECTION);
+  // listSection.className = CLASSES.NAVBAR_LINK_SECTION;
+
+  // listSection.appendChild(list);
+
+  // Section used for the buttons (currently only settings) - right side of the navbar.
+  // const buttonSection = document.createElement(HTML_ELEMENTS.SECTION);
+  // buttonSection.className = CLASSES.NAVBAR_BUTTON_SECTION;
+
   navBar.appendChild(list);
+  // navBar.appendChild(buttonSection);
   
   // Setup circle indicator after navbar is created
   requestAnimationFrame(() => {

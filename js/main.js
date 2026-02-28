@@ -53,7 +53,7 @@ function initApp() {
     const navbar = createNavbar(HISTORY_NAVIGATION_ROUTES);
     navbarContainer.appendChild(navbar);
 
-    // Initialize settings menu with the navbar container
+    // Initialize settings menu (button has fixed positioning, doesn't affect navbar link layout)
     initSettingsMenu(navbarContainer);
   }
 }

@@ -1,48 +1,57 @@
-# 🎨 Portfolio Website
+# My Personal Portfolio
 
-A modern, single-page application portfolio with **dynamic router switching** capability.
+A personal portfolio website built with pure JavaScript, CSS, and HTML — no frameworks, no build tools, no dependencies. Built from scratch as a learning project.
 
-## ✨ Features
+## Features
 
-### 🔄 Dynamic Router Switching
-- **Switch between Hash and History routing in real-time**
-- Toggle button in the top right corner
-- Preserves current page state when switching
-- Remembers your preference
+- **Single Page Application** — custom client-side routing with the History API for clean URLs, plus a hash-based fallback router
+- **Dynamic page background** — animated diagonal stripe that transitions between pages
+- **Navbar circle indicator** — SVG circle that smoothly follows the active navigation link
+- **Settings menu** — slide-out panel with a blueprint debug mode toggle (persisted via localStorage)
+- **Localization support** — i18n system with centralized locale strings (currently English)
+- **Responsive design** — adapts to mobile and desktop viewports
+- **Dark theme support** — CSS custom properties for light/dark theming
 
-### 🧭 Dual Routing System
-- **History API Router** (default) - Clean URLs: `/home`, `/about-me`
-- **Hash Router** - Universal compatibility: `/#home`, `/#about-me`
-- Both extend a common `BaseRouter` class
+## Pages
 
-### 🎯 Professional Architecture
-- Object-oriented inheritance pattern
-- Modular component system
-- Co-located CSS with components
-- JSDoc documentation throughout
+| Route | Page | Description |
+|-------|------|-------------|
+| `/home` | Home | Hero section with welcome text |
+| `/about-me` | About Me | Bio and skills list |
+| `/projects` | Projects | Project cards grid with tech tags |
+| `/misc` | Art | Art gallery (coming soon) |
 
-### 📱 Responsive Design
-- Mobile-first approach
-- CSS custom properties for theming
-- Smooth page transitions
-- Accessible navigation
+## Project Structure
 
-## 🚀 Quick Start
+```
+.
+├── index.html              # Entry point
+├── js/
+│   ├── main.js             # App initialization and route configuration
+│   ├── components/         # Reusable UI components (navbar, settings menu, etc.)
+│   ├── pages/              # Page components (home, about, projects, misc, not-found)
+│   ├── routing/            # Custom SPA router (base, history, hash)
+│   ├── constants/          # Centralized CSS classes, DOM IDs, HTML elements
+│   ├── locales/            # i18n locale strings
+│   └── utils/              # Shared utilities
+├── css/
+│   ├── main.css            # Master stylesheet (imports all others)
+│   ├── reset.css           # CSS reset
+│   ├── colors.css          # Color variables and theming
+│   ├── typography.css      # Font styles
+│   └── layout.css          # Layout and responsive breakpoints
+└── assets/
+    ├── fonts/              # Custom fonts
+    └── icons/              # SVG icons
+```
 
-1. Clone and open:
-   ```bash
-   git clone https://github.com/ValentimSts/portfolio.git
-   cd portfolio
-   open index.html
-   ```
+## Development
 
-2. Try router switching - Click the 🧭 button in the top right!
+No build step required. Run the included script to start a local server:
 
-## 📖 Documentation
+```bash
+./serve.sh        # serves on port 8000
+./serve.sh 3000   # custom port
+```
 
-- **[ROUTING.md](ROUTING.md)** - Comprehensive routing documentation
-- **[ROUTER-SWITCHING.md](ROUTER-SWITCHING.md)** - Dynamic switching guide
-
----
-
-**🔄 Try the dynamic router switching - it's seamless!**
+ES6 modules require HTTP — `file://` won't work.

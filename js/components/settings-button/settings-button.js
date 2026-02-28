@@ -44,7 +44,7 @@ export function createSettingsButton({
 
   // Create icon using the settings SVG
   const icon = document.createElement('img');
-  icon.src = 'assets/icons/Arturo-Wibawa-Akar-Settings-horizontal.svg';
+  icon.src = 'assets/icons/orange-slice.svg';
   icon.alt = '';
   icon.className = CLASSES.SETTINGS_BUTTON_ICON;
   icon.setAttribute('aria-hidden', 'true');

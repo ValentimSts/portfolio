@@ -330,18 +330,14 @@ export function initSettingsMenu(navbarElement) {
     // Initialize blueprint state from localStorage
     initBlueprintState();
 
-    // const navbarItemList = navbarElement.querySelector(HTML_ELEMENTS.UNORDERED_LIST);
     if (navbarElement) {
-      // Add the settings button as the last item in the navbar list
-        const buttonSection = document.createElement(HTML_ELEMENTS.SECTION);
-        const button = createSettingsButton({
-          id: IDs.SETTINGS_BUTTON,
-          onClick: toggleSettingsMenu,
-          ariaLabel: 'Open settings menu'
-        });
-        settingsMenuState.buttonElement = button;
-        buttonSection.appendChild(button);
-        navbarElement.appendChild(buttonSection);
+      const button = createSettingsButton({
+        id: IDs.SETTINGS_BUTTON,
+        onClick: toggleSettingsMenu,
+        ariaLabel: 'Open settings menu'
+      });
+      settingsMenuState.buttonElement = button;
+      navbarElement.appendChild(button);
     }
 
   const overlay = createOverlay();

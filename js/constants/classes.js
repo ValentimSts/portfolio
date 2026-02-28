@@ -12,6 +12,12 @@
  * @readonly
  */
 export const CLASSES = {
+  // Navbar
+  /** @type {string} Navbar links section class */
+  NAVBAR_LINK_SECTION: 'navbar__link-section',
+  /** @type {string} Navbar buttons section class */
+  NAVBAR_BUTTON_SECTION: 'navbar__button-section',
+
   // Settings Button
   /** @type {string} Settings button class */
   SETTINGS_BUTTON: 'settings-button',

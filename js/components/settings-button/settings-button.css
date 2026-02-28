@@ -6,6 +6,10 @@
 
 /* Settings Button */
 .settings-button {
+  position: fixed;
+  top: 2.7rem;
+  right: 3rem;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
